@@ -135,6 +135,7 @@
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
 [tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_pokan.mp3"  ]
 [tb_start_text mode=1 ]
 #？？？
 「ちょっと、そのポカンとした顔は何！？」[p]
