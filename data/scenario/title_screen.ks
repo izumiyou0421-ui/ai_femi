@@ -22,7 +22,7 @@
 ;タイトル表示
 
 
-[bgmovie  time="1000"  volume="100"  loop="true"  storage="Home2.mp4"  ]
+[bgmovie  time="1000"  volume="0"  loop="true"  storage="title_animation.mp4"  ]
 [tb_image_show  time="1500"  storage="default/aifemilogo_アートボード-1.png"  width="688"  height="119"  x="58"  y="38"  _clickable_img=""  name="img_9"  ]
 *title
 

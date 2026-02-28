@@ -39,7 +39,7 @@
 [tb_start_text mode=1 ]
 #&f.player
 （はあっ……はあっ、なんとか、間に合った！）[p]
-（ああ、心臓がバクバクだ。とりあえずクイッターでも見て落ち着くか……）[p]
+（ああ、心臓がバクバクだ。とりあえずツブッターでも見て落ち着くか……）[p]
 [_tb_end_text]
 
 [stopse  time="1000"  buf="0"  ]
@@ -53,7 +53,7 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1630042_tapping.mp3"  ]
 [tb_start_text mode=1 ]
 #アカウントB
-「CMにまでイチャモンつけるなよ。たかがCMだろ。女性を描けば全部性的とか、クイフェミの妄想が過ぎる。」[p]
+「CMにまでイチャモンつけるなよ。たかがCMだろ。女性を描けば全部性的とか、ツブフェミの妄想が過ぎる。」[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1243965_tameiki.mp3"  ]
@@ -113,7 +113,7 @@
 [plugin name=tip mark=true]
 [_tb_end_tyrano_code]
 
-[playse  volume="500"  time="1000"  buf="0"  storage="fuemi_microagression_volumeup.mp3"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_zikakuhaarunokashira.mp3"  ]
 [tb_start_text mode=4 ]
 #？？？
 「そうよ！あんたが今ここに立っていること自体、構造的な『[font color=#fc009c][tip key="danseitokken"]男性特権[endtip][font color=#000000]』の行使で、
@@ -159,6 +159,7 @@
 [_tb_end_text]
 
 [tb_ptext_show  x="47"  y="148"  size="150"  color="0xfc009c"  time="0"  text="マンスプレイニング"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInLeft"  out_effect="fadeOut"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_wakatteruno.mp3"  ]
 [tb_start_text mode=1 ]
 #？？？
 「うっかりが許されると思っているのが強者の傲慢なの！あんたのその態度は典型的な『[font color=#fc009c][tip key="Mansplaining"]マンスプレイング[endtip][font color=#000000]』の予兆よ。」[p]
