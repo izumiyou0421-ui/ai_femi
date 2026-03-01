@@ -140,6 +140,7 @@
 
 [wait  time="1000"  ]
 [camera  time="1000"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="30"  ease_type="linear"  ]
+
 [chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_re.png"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="kaburi26.2.23.1949_(mp3cut.net).mp3"  ]
 [tb_start_text mode=1 ]
@@ -156,6 +157,7 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="かぶり"  direction="y"  count="1"  swing="20"  time="600"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「あんた以外誰がおるん？」[p]
@@ -209,6 +211,7 @@
 [chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_laugh.png"  ]
 [tb_manpu  type="waiwai"  width="285"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="497"  y="-23"  left="497"  top="-23"  height="285"  ]
 [tb_chara_shake  name="かぶり"  direction="x"  count="2"  swing="20"  time="300"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「……ぷっ、あはは！あんた、それ本気で言うてんの？少女漫画のヒーローのつもり？」[p]
@@ -267,6 +270,7 @@
 [_tb_end_text]
 
 [camera  time="500"  zoom="1.5"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
+
 [tb_start_text mode=1 ]
 #
 甘い香りが漂ってくるほどの距離に、猫尾かぶりの顔が近づく。[p]
@@ -275,12 +279,11 @@
 「なぁ、あんたの目に、うちはどう映ってる？正直に言うてみ？」[p]
 [_tb_end_text]
 
-[tb_start_text mode=1 ]
-#
-AIかぶりとの対話[p]
-[_tb_end_text]
+[jump  storage="kaburi_ai.ks"  target="*start"  ]
+*finish_ai
 
 [reset_camera  time="600"  wait="true"  layer="0"  ease_type="linear"  ]
+
 [chara_mod  name="かぶり"  time="0"  cross="true"  storage="chara/2/kaburi_middle_basic_re.png"  ]
 [tb_start_text mode=1 ]
 #猫尾かぶり
@@ -288,6 +291,7 @@ AIかぶりとの対話[p]
 [_tb_end_text]
 
 [tb_chara_shake  name="かぶり"  direction="y"  count="2"  swing="20"  time="300"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「ふふっ、あははは！おもろい、あんたおもろいなぁ」[p]
@@ -313,6 +317,7 @@ AIかぶりとの対話[p]
 
 [chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_basic_re.png"  ]
 [tb_chara_shake  name="かぶり"  direction="y"  count="2"  swing="30"  time="300"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「ふふふっ、ほなまた後でな。待ってるで、[emb exp="f.player"]くん」[p]

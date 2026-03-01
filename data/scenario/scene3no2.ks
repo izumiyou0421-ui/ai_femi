@@ -180,16 +180,17 @@
 [_tb_end_text]
 
 [camera  time="1000"  zoom="1.3"  wait="true"  layer="0"  y="30"  rotate="0"  ]
+
 [tb_start_text mode=1 ]
 #長狭レナイ
 「……設問。[emb exp="f.player"]は、４年ぶりに再会した私と、学内に隠された歪みを、受け入れることができる？」[p]
 [_tb_end_text]
 
-[tb_start_text mode=1 ]
-AIレナイとの対話[p]
-[_tb_end_text]
+[jump  storage="renai_ai.ks"  target="*start"  ]
+*finish_ai
 
 [reset_camera  time="1000"  wait="true"  layer="0"  ]
+
 [tb_start_text mode=1 ]
 #長狭レナイ
 「……記録、完了。やはり、あなたの言葉は私の[ruby text=シス]論[ruby text=テム]理を狂わせるバグ。……解析には、より深い接触が必要」[p]

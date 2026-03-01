@@ -140,6 +140,7 @@
 
 [wait  time="1000"  ]
 [camera  time="1000"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="30"  ease_type="linear"  ]
+
 [chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_re.png"  ]
 [tb_start_text mode=1 ]
 #猫尾かぶり
@@ -155,6 +156,7 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="かぶり"  direction="y"  count="2"  swing="20"  time="300"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「あんた以外に誰がおるん？」[p]
@@ -214,6 +216,7 @@
 
 [tb_manpu  type="tameiki"  width="139"  time="500"  in_time="500"  out_time="500"  wait="true"  sevolume="0"  x="513"  y="234"  left="513"  top="234"  height="139"  ]
 [tb_chara_shake  name="かぶり"  direction="y"  count="1"  swing="20"  time="600"  ]
+
 [tb_start_text mode=1 ]
 #猫尾かぶり
 「……あんたもそっち側ってわけやんな」[p]

@@ -1,4 +1,4 @@
-[_tb_system_call storage=system/_ai.ks]
+[_tb_system_call storage=system/_renai_ai.ks]
 
 *start
 
@@ -53,7 +53,7 @@ val = val.slice(1, -1);
 val = val.replace(/\\n/g, "\n");
 }
 if (key === "GROK_API_KEY") f.api_key = val;
-if (key === "SYSTEM_PROMPT") f.system_prompt_text = val;
+if (key === "RENAI_SYSTEM_PROMPT") f.system_prompt_text = val;
 }
 });
 f.env_loaded = true;
@@ -151,7 +151,7 @@ f.user_input = "";
 
 
 #
-ふえみに何と言う？[p]
+レナイに何と言う？[p]
 
 
 [r]
@@ -168,7 +168,7 @@ f.user_input = "";
 ; ★重要: exp属性でジャンプする前に値を保存する関数を実行します
 
 
-[glink  color="blue"  storage="ai.ks"  target="*submit_input"  text="決定"  x="850"  y="420"  width="100"  height="20"  exp="f.captureInput()"  ]
+[glink  color="blue"  storage="renai_ai.ks"  target="*submit_input"  text="決定"  x="850"  y="420"  width="100"  height="20"  exp="f.captureInput()"  ]
 [s  ]
 
 ;-----------------------------------------------------------
@@ -207,7 +207,7 @@ f.sendToGrok(f.user_input);
 
 [cm  ]
 
-#ふえみ
+#レナイ
 
 
 *wait_loop
@@ -226,5 +226,5 @@ f.sendToGrok(f.user_input);
 ; 最初に戻る
 
 
-[jump  storage="scene1.ks"  target="*finish_ai"  ]
+[jump  storage="scene3no2.ks"  target="*finish_ai"  ]
 [jump  target="*input_start"  storage=""  ]
