@@ -1,75 +1,10 @@
 [_tb_system_call storage=system/_preview.ks ]
 
 [mask time=10]
-[mask_off time=10]
-*start
-
-[bg  storage="street_in_spring.jpg"  time="0"  ]
-[playbgm  volume="20"  time="0"  loop="true"  storage="audiostock_1023403_opening.mp3"  ]
-[mask_off  time="500"  effect="fadeOut"  ]
-[cm  ]
-[tb_show_message_window  ]
-[tb_start_text mode=1 ]
-#&f.player
-「やばい、遅刻する！！」[p]
-
-[_tb_end_text]
-
-[tb_start_text mode=1 ]
-#&f.player
-俺の名前は『[emb exp="f.player"]』。今日で高校生としての２度目の春を迎える。[p]
-[_tb_end_text]
-
-[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_104457.mp3"  loop="true"  ]
-[tb_start_text mode=1 ]
-#&f.player
-「バカかよ、俺！転校初日から遅刻とかありえねえ！」[p]
-[_tb_end_text]
-
-[stopse  time="1000"  buf="0"  ]
-[tb_start_text mode=1 ]
-#&f.player
-俺はこの春から青蘭高校に転入する。[p]
-「次の電車を逃したらおしまいだ……頼むから、間に合ってくれ！！」[p]
-[_tb_end_text]
-
-[stopbgm  time="1000"  fadeout="true"  ]
-[wait  time="500"  ]
-[playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_211407_train.mp3"  ]
-[bg  time="1000"  method="crossfade"  storage="train_morning.png"  ]
-[playse  volume="70"  time="1000"  buf="0"  storage="audiostock_1593120_haahaa.mp3"  loop="true"  fadein="true"  ]
-[tb_start_text mode=1 ]
-#&f.player
-（はあっ……はあっ、なんとか、間に合った！）[p]
-（ああ、心臓がバクバクだ。とりあえずツブッターでも見て落ち着くか……）[p]
-[_tb_end_text]
-
-[stopse  time="1000"  buf="0"  ]
-[bg  time="1000"  method="crossfade"  storage="train_morning_quitter.PNG"  ]
-[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1630042_tapping.mp3"  ]
-[tb_start_text mode=1 ]
-#アカウントA
-「女性が頬を赤らめるシーンを性的な消費だとするのは当然。女性はなぜ男性の消費対象として提示されなければならないの？女性の自由を侵害している！」[p]
-[_tb_end_text]
-
-[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1630042_tapping.mp3"  ]
-[tb_start_text mode=1 ]
-#アカウントB
-「CMにまでイチャモンつけるなよ。たかがCMだろ。女性を描けば全部性的とか、ツブフェミの妄想が過ぎる。」[p]
-[_tb_end_text]
-
-[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1243965_tameiki.mp3"  ]
-[tb_start_text mode=1 ]
-#&f.player
-（ああ、またこの手のレスバか……ヒートアップしてるな）[p]
-[_tb_end_text]
-
-[stopbgm  time="1000"  ]
-[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
-[wait  time="300"  ]
-[bg  time="0"  method="crossfade"  storage="train_morning.png"  ]
-[mask_off  time="500"  effect="fadeOut"  ]
+[bg  time="10"  method="crossfade"  storage="train_morning.png"  ]
 [playbgm  volume="60"  time="1000"  loop="true"  storage="audiostock_1557823_fuemi1_(mp3cut.net).mp3"  ]
+[tb_show_message_window] 
+[mask_off time=10]
 [chara_show  name="ふえみ"  time="1000"  wait="true"  storage="chara/1/aino_basic_middle_silhouette_re.png"  width="1280"  height="720"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_neetyotto.mp3"  ]
 [tb_start_text mode=1 ]
@@ -82,7 +17,7 @@
 （俺……？）[p]
 [_tb_end_text]
 
-[chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re2.png"  ]
+[chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/fuemi_animation2_haikeitouka.gif"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="300"  ]
 [playse  volume="3000"  time="1000"  buf="0"  storage="fuemin_kokogadokokawakattennno_volumeup.mp3"  ]
 [tb_start_text mode=1 ]
