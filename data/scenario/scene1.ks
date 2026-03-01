@@ -82,6 +82,7 @@
 
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re2.png"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="300"  ]
+
 [playse  volume="3000"  time="1000"  buf="0"  storage="fuemin_kokogadokokawakattennno_volumeup.mp3"  ]
 [tb_start_text mode=1 ]
 #？？？
@@ -134,6 +135,7 @@
 [quake  time="300"  count="3"  hmax="10"  wait="true"  ]
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
+
 [tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_pokan.mp3"  ]
 [tb_start_text mode=1 ]
@@ -167,7 +169,9 @@
 
 [tb_ptext_hide  time="300"  ]
 [camera  time="250"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
+
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
+
 [tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
 [tb_start_text mode=1 ]
 #？？？
@@ -199,6 +203,7 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
+
 [tb_start_text mode=1 ]
 #？？？
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]
@@ -216,6 +221,7 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
+
 [tb_start_text mode=1 ]
 #？？？
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]
@@ -238,6 +244,7 @@
 [playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_988217_fuemi_awawa.mp3"  ]
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_doki.png"  ]
 [reset_camera  time="250"  wait="true"  layer="0"  ease_type="ease"  ]
+
 [tb_start_text mode=1 ]
 #？？？
 「えっ……？定義？それは……その、『インターセクショナリティ』の観点から、被差別側の主観を尊重して……」[p]
@@ -258,13 +265,14 @@
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
 [playse  volume="500"  time="1000"  buf="0"  storage="audiostock_372220_bishi!.mp3"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
+
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_unconciousbias_volumeup2.mp3"  ]
 [tb_start_text mode=1 ]
 #？？？
 「『アンコンシャス・バイアス』を自覚しなさい！反論があるなら、少しくらいなら聞いてあげるわ！」[p]
 [_tb_end_text]
 
-[jump  storage="ai.ks"  target="*start"  ]
+[jump  storage="fuemi_ai.ks"  target="*start"  ]
 *finish_ai
 
 [playse  volume="500"  time="1000"  buf="0"  storage="audiostock_41886_trainopening.mp3"  ]
@@ -282,8 +290,10 @@
 [tb_ptext_hide  time="1000"  ]
 [chara_mod  name="ふえみ"  time="500"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
 [camera  time="250"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
+
 [tb_manpu  type="nanto"  width="171"  time="1000"  in_time="1000"  out_time="500"  wait="false"  sevolume="100"  x="438"  y="22"  left="438"  top="22"  height="171"  ]
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="150"  ]
+
 [tb_start_text mode=1 ]
 #？？？
 「ちょ、ちょっと！待ちなさい！話はまだ終わって……」[p]
@@ -300,5 +310,6 @@
 [stopbgm  time="1000"  fadeout="true"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [reset_camera  time="0"  wait="true"  layer="0"  ]
+
 [playse  volume="100"  time="1000"  buf="0"  storage="audiostock_40475_chime.mp3"  ]
 [jump  storage="scene2no2.ks"  target="*start"  ]
