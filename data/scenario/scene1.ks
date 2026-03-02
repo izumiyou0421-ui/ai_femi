@@ -2,7 +2,7 @@
 
 *start
 
-[bg  storage="street_in_spring.jpg"  time="0"  ]
+[bgmovie  time="1000"  volume="0"  loop="true"  storage="street_in_spring_animation.mp4"  ]
 [playbgm  volume="20"  time="0"  loop="true"  storage="audiostock_1023403_opening.mp3"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
 [cm  ]
@@ -10,7 +10,6 @@
 [tb_start_text mode=1 ]
 #&f.player
 「やばい、遅刻する！！」[p]
-
 [_tb_end_text]
 
 [tb_start_text mode=1 ]
@@ -31,10 +30,10 @@
 「次の電車を逃したらおしまいだ……頼むから、間に合ってくれ！！」[p]
 [_tb_end_text]
 
+[stop_bgmovie  time="0"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[wait  time="500"  ]
+[bg  time="1000"  method="crossfade"  storage="train_morning2.png"  cross="true"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_211407_train.mp3"  ]
-[bg  time="1000"  method="crossfade"  storage="train_morning.png"  ]
 [playse  volume="70"  time="1000"  buf="0"  storage="audiostock_1593120_haahaa.mp3"  loop="true"  fadein="true"  ]
 [tb_start_text mode=1 ]
 #&f.player
@@ -68,7 +67,7 @@
 [bg  time="0"  method="crossfade"  storage="train_morning.png"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
 [playbgm  volume="60"  time="1000"  loop="true"  storage="audiostock_1557823_fuemi1_(mp3cut.net).mp3"  ]
-[chara_show  name="ふえみ"  time="1000"  wait="true"  storage="chara/1/aino_basic_middle_silhouette_re.png"  width="1280"  height="720"  ]
+[chara_show  name="ふえみ"  time="0"  wait="true"  storage="chara/1/aino_basic_middle_silhouette_re.png"  width="1280"  height="720"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_neetyotto.mp3"  ]
 [tb_start_text mode=1 ]
 #？？？
@@ -80,12 +79,16 @@
 （俺……？）[p]
 [_tb_end_text]
 
-[chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re2.png"  ]
+[chara_mod  name="ふえみ"  time="0"  cross="true"  storage="chara/1/fuemi_noface_haikeitouka.png"  ]
+[chara_part  name="ふえみ"  time="500"  目="fuemi_eye_haikeitouka.png"  シルエット="none"  口="fuemi_mouth.png"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="300"  ]
-
 [playse  volume="3000"  time="1000"  buf="0"  storage="fuemin_kokogadokokawakattennno_volumeup.mp3"  ]
+[iscript]
+TYRANO.kag.stat.charas['ふえみ'].jname = '？？？'
+[endscript]
+
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「あんた、ここがどこかわかってんの？」[p]
 [_tb_end_text]
 
@@ -99,7 +102,7 @@
 [quake  time="300"  count="3"  hmax="10"  wait="true"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_konozikanhazyoseisenyounanoyo2.mp3"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「この時間は女性専用なのよ！」[p]
 [_tb_end_text]
 
@@ -109,7 +112,8 @@
 [_tb_end_text]
 
 [bg  time="1000"  method="crossfade"  storage="train_morning2.png"  ]
-[chara_show  name="ふえみ"  time="50"  wait="true"  storage="chara/1/aino_basic_middle_o_re2.png"  width="1280"  height="720"  ]
+[chara_show  name="ふえみ"  time="0"  wait="true"  storage="chara/1/fuemi_noface_haikeitouka.png"  width="1280"  height="720"  ]
+[chara_part  name="ふえみ"  time="500"  目="fuemi_eye_haikeitouka.png"  口="fuemi_mouth.png"  シルエット="none"  ]
 [tb_start_tyrano_code]
 [plugin name=tip mark=true]
 [_tb_end_tyrano_code]
@@ -123,7 +127,7 @@
 [tb_ptext_show  x="830"  y="67"  size="150"  color="0xfc009c"  time="0"  text="男性特権"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInRight"  out_effect="fadeOut"  ]
 [tb_ptext_show  x="95"  y="365"  size="150"  color="0xfc009c"  time="0"  text="マイクロアグレッション"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInLeft"  out_effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 この空間にいる女性たちへの『[font color=#fc009c][tip key="microaggression"]マイクロアグレッション[endtip][font color=#000000]』だって自覚はあるのかしら？」[p]
 [_tb_end_text]
 
@@ -133,25 +137,26 @@
 [_tb_end_text]
 
 [quake  time="300"  count="3"  hmax="10"  wait="true"  ]
-[chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
+[chara_part  name="ふえみ"  time="1000"  目="fuemi_eye_haikeitouka.png"  口="fuemi_mouth.png"  シルエット="none"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
-
-[tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_pokan.mp3"  ]
+[tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「ちょっと、そのポカンとした顔は何！？」[p]
 [_tb_end_text]
 
+[chara_part  name="ふえみ"  time="0"  目="fuemi_eye_haikeitouka.png"  口="fuemi_mouth.png"  シルエット="none"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_wakatteruno.mp3"  ]
 [tb_start_text mode=4 ]
-#？？？
+#ふえみ
 「ここは、女性が日常的に晒されている『[font color=#fc009c][tip key="malegaze"]メイルゲイズ[endtip][font color=#000000]』や
 [_tb_end_text]
 
 [tb_ptext_show  x="772"  y="253"  size="150"  color="0xfc009c"  time="0"  text="メイルゲイズ"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInRight"  out_effect="fadeOut"  ]
 [tb_ptext_show  x="78"  y="9"  size="150"  color="0xfc009c"  time="0"  text="セーファースペース"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInLeft"  out_effect="fadeOut"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 性的加害の恐怖から逃れるための場所よ！あんたの行動は、女性が安心して過ごせる『[font color=#fc009c][tip key="saferspace"]セーファースペース[endtip][font color=#000000]』を侵害する暴力なの！」[p]
 [_tb_end_text]
 
@@ -163,18 +168,16 @@
 [tb_ptext_show  x="47"  y="148"  size="150"  color="0xfc009c"  time="0"  text="マンスプレイニング"  face="GN-Kin-iro_SansSerif"  edge="undefined"  shadow="undefined"  anim="true"  fadeout="false"  wait="false"  in_effect="bounceInLeft"  out_effect="fadeOut"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_wakatteruno.mp3"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「うっかりが許されると思っているのが強者の傲慢なの！あんたのその態度は典型的な『[font color=#fc009c][tip key="Mansplaining"]マンスプレイング[endtip][font color=#000000]』の予兆よ。」[p]
 [_tb_end_text]
 
 [tb_ptext_hide  time="300"  ]
 [camera  time="250"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
-
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
-
 [tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「私を感情的な女と決めつけて、教え諭そうとしてるんでしょ！？」[p]
 [_tb_end_text]
 
@@ -203,9 +206,8 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
-
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]
 #&f.player
 「そこまで言うなら、その『誤ったなんとか』とやらの定義を教えてくれ。何が良くて、何がダメなのか」[p]
@@ -221,9 +223,8 @@
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
-
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]
 #&f.player
 「そこまで言うなら、その『誤ったなんとか』とやらの定義を教えてくれ。何が良くて、何がダメなのか」[p]
@@ -242,11 +243,11 @@
 
 [stopbgm  time="1000"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_988217_fuemi_awawa.mp3"  ]
+[chara_part  name="ふえみ"  time="0"  目="none"  口="none"  シルエット="none"  ]
 [chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_doki.png"  ]
 [reset_camera  time="250"  wait="true"  layer="0"  ease_type="ease"  ]
-
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「えっ……？定義？それは……その、『インターセクショナリティ』の観点から、被差別側の主観を尊重して……」[p]
 #&f.player
 「あんた、実は用語を並べてるだけで、本質は理解してないんじゃないのか？」[p]
@@ -254,21 +255,21 @@
 
 [quake  time="300"  count="3"  hmax="10"  wait="true"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「なっ……！本質を理解してない！？この私が……！？」[p]
-#？？？
+#ふえみ
 「そ、それは……えーっと、とにかく無意識なのが問題なのよ！このくらい自分で調べなさいよね！」[p]
 [_tb_end_text]
 
 [stopbgm  time="500"  fadeout="true"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_1557823_fuemi1_(mp3cut.net).mp3"  ]
-[chara_mod  name="ふえみ"  time="600"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
+[chara_mod  name="ふえみ"  time="0"  cross="true"  storage="chara/1/fuemi_noface_haikeitouka.png"  ]
+[chara_part  name="ふえみ"  time="500"  目="fuemi_eye_haikeitouka.png"  口="fuemi_mouth.png"  シルエット="none"  ]
 [playse  volume="500"  time="1000"  buf="0"  storage="audiostock_372220_bishi!.mp3"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
-
 [playse  volume="100"  time="1000"  buf="0"  storage="fuemi_unconciousbias_volumeup2.mp3"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「『アンコンシャス・バイアス』を自覚しなさい！反論があるなら、少しくらいなら聞いてあげるわ！」[p]
 [_tb_end_text]
 
@@ -278,6 +279,7 @@
 [playse  volume="500"  time="1000"  buf="0"  storage="audiostock_41886_trainopening.mp3"  ]
 [playbgm  volume="50"  time="1000"  loop="true"  storage="audiostock_211407_train.mp3"  ]
 [tb_start_text mode=1 ]
+#
 『次は、千鶴台、千鶴台。お出口は左側です』[p]
 [_tb_end_text]
 
@@ -288,14 +290,13 @@
 [_tb_end_text]
 
 [tb_ptext_hide  time="1000"  ]
-[chara_mod  name="ふえみ"  time="500"  cross="true"  storage="chara/1/aino_basic_middle_o_re.png"  ]
+[chara_part  name="ふえみ"  time="1000"  目="fuemi_eye_haikeitouka.png"  口="fuemi_mouth.png"  シルエット="none"  ]
 [camera  time="250"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
-
 [tb_manpu  type="nanto"  width="171"  time="1000"  in_time="1000"  out_time="500"  wait="false"  sevolume="100"  x="438"  y="22"  left="438"  top="22"  height="171"  ]
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="150"  ]
-
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_machinasai.mp3"  ]
 [tb_start_text mode=1 ]
-#？？？
+#ふえみ
 「ちょ、ちょっと！待ちなさい！話はまだ終わって……」[p]
 [_tb_end_text]
 
@@ -308,8 +309,9 @@
 [tb_hide_message_window  ]
 [chara_hide  name="ふえみ"  time="500"  wait="true"  pos_mode="true"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
-[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
+[stopse  time="500"  buf="0"  fadeout="true"  ]
+[mask  time="300"  effect="fadeIn"  color="0x000000"  ]
 [reset_camera  time="0"  wait="true"  layer="0"  ]
-
-[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_40475_chime.mp3"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]
+[bgmovie  time="500"  volume="100"  loop="true"  storage="vidu-video-3184536235882361_(1).mp4"  ]
 [jump  storage="scene2no2.ks"  target="*start"  ]
