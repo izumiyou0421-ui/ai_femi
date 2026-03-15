@@ -1,3 +1,4 @@
+[preload  storage="./data/bgimage/street_in_spring.jpg"  ]
 [preload  storage="./data/bgimage/train_morning2.png"  ]
 [preload  storage="./data/bgimage/train_morning_quitter.PNG"  ]
 [preload  storage="./data/bgimage/train_morning.png"  ]

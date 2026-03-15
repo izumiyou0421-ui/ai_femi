@@ -30,5 +30,5 @@
 [jump  storage="user_name.ks"  target="*input_start"  ]
 *input_ok
 
-[mask  time="500"  effect="fadeIn"  color="0x000000"  ]
+[mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [jump  storage="scene1.ks"  target="*start"  ]

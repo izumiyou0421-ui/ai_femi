@@ -2,10 +2,11 @@
 
 *start
 
+[cm  ]
+[bg  time="0"  method="crossfade"  storage="street_in_spring.jpg"  ]
 [bgmovie  time="1000"  volume="0"  loop="true"  storage="street_in_spring_animation.mp4"  ]
 [playbgm  volume="20"  time="0"  loop="true"  storage="audiostock_1023403_opening.mp3"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
-[cm  ]
 [tb_show_message_window  ]
 [tb_start_text mode=1 ]
 #&f.player
