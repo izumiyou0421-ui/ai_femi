@@ -2,12 +2,11 @@
 
 *start
 
-[cm  ]
-[wait  time="3000"  ]
-[bg  time="1000"  method="crossfade"  storage="room2.jpg"  ]
-[tb_ptext_hide  time="0"  ]
 [playbgm  volume="100"  time="1000"  loop="true"  storage="audiostock_124312_school.mp3"  ]
 [tb_show_message_window  ]
+[cm  ]
+[bg  time="0"  method="crossfade"  storage="room2.jpg"  ]
+[mask_off  time="500"  effect="fadeOut"  ]
 [tb_start_text mode=1 ]
 （ほんと、なんだったんだ……さっきのは）[p]
 駅を出てから、ずっと頭の中であの女の子の声が反響し続けている。[p]
@@ -321,3 +320,4 @@
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopbgm  time="1000"  fadeout="true"  ]
 [jump  storage="scene3no2.ks"  target="*start"  ]
+[mask_off  time="1000"  effect="fadeOut"  ]

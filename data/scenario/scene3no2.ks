@@ -3,7 +3,7 @@
 *start
 
 [cm  ]
-[bg  time="1000"  method="crossfade"  storage="room_afternoon.png"  ]
+[bg  time="100"  method="crossfade"  storage="room_afternoon.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
 [tb_show_message_window  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="audiostock_40475_chime.mp3"  ]
