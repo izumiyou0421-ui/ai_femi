@@ -1,157 +1,138 @@
-/*******************************************
-	【TIPプラグイン】　TIP詳細
-********************************************/
-
 @charset "utf-8";
-
-
-/** 閉じるボタン *****************************/
-.tip_close_area {
-	top: 50px;
-	right: 12.5%;
-	position:absolute;
-}
-.tip_close_button {
-	position:absolute;
-	width:45px;
-	height:45px;
-	right:-25px;
-	top:-25px;
-	cursor:pointer;
-	/*font-family:"ＭＳ ゴシック", "MS Gothic", "Osaka－等幅", Osaka-mono, monospace;*/
-	font-size:36px;
-	color:#fff;
-	line-height:40px;
-	text-align:center;
-	text-decoration: none;
-	background:#333;
-	border-radius:50%;
-	border:3px solid #fff;
-	box-shadow: 0 0 8px #000;
-	z-index: 1;
-}
-
 
 /** 全体 ********************************/
 #tip_wrap {
-	position:absolute;
-	width:100%;
-	height:100%;
-	top:0;
-	left:0;
-	text-align:left;
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	text-align: left;
 	background: rgba(0,0,0,0.7);
 	z-index: 10000;
 }
-/* 表示部分 */
+
+/* 表示部分（画面全体に対する本のサイズを調整） */
 #tip_container {
-	width:100%;
-	height:100%;
-	padding: 50px 12.5%;
-}
-/* 窓部分 */
-.tip_area {
+	position: relative;
+	width: 100%;
 	height: 100%;
-	width:100%;
-	padding: 15px;
-	background: #fff;
-	border:1px solid #fff;
-	border-radius: 6px;
+	padding: 1% 2%; /* 本を大きく表示 */
+	box-sizing: border-box;
 }
-/* 詳細表示部分 */
+
+/* 閉じるボタン */
+.tip_close_area {
+	position: absolute;
+	top: 3%;
+	right: 5%;
+	z-index: 10001;
+}
+.tip_close_button {
+	display: block;
+	width: 45px;
+	height: 45px;
+	cursor: pointer;
+	font-family: '游明朝', 'YuMincho', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+	font-size: 36px;
+	color: #fff;
+	line-height: 40px;
+	text-align: center;
+	text-decoration: none;
+	background: #222;
+	border: 2px solid #222;
+	border-radius: 0;
+}
+
+/* 窓部分（本全体） */
+.tip_area {
+	position: relative;
+	height: 100%;
+	width: 100%;
+	background-image: url("../image/simple_dictionary_bg.png"); 
+	background-size: 100% 100%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent; 
+	border: none; 
+
+	/* 【重要】テキストが本の内側（白い紙の部分）に収まるように余白を設定 */
+	/* 上 12% / 右 12% / 下 15% / 左 12% （はみ出す場合はここを増やします） */
+	padding: 12% 12% 15% 12%; 
+	box-sizing: border-box;
+
+	font-family: '游明朝', 'YuMincho', 'ヒラギノ明朝 ProN', 'Hiragino Mincho ProN', 'ＭＳ Ｐ明朝', 'MS PMincho', serif;
+	color: #222;
+}
+
 .tip_item {
 	position: relative;
-	width:100%;
-	height:100%;
+	width: 100%;
+	height: 100%;
 }
 
-/** タイトル部分 *******************************/
+/* タイトル部分 */
 .tip_head {
-	position:relative;
-	padding: 4px 15px;
-	display:block;
-	width:100%;
-	color:#fff;
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.7);
-	background: linear-gradient(to bottom, #02afea, #0077c1);
-	border-radius: 6px;
-	font-size: 24px;
+	position: relative;
+	padding: 0 0 10px 0; /* 1段組なので左右の変な余白を消しました */
+	margin-top: 0;
+	margin-bottom: 20px;
+	display: block;
+	width: 100%;
+	color: #222;
+	text-shadow: none;
+	background: transparent;
+	border-bottom: 2px solid #222; /* 下線を引いて見出し風に */
+	font-size: 28px;
 	font-weight: bold;
 }
-/* idを小文字に */
-.tip_id{
-	font-size:75%;
-	margin-right:0.75em;
-}
-/* newマーク */
-.tip_head .new {
-	color: red;
-	margin-left: 0.5em;
-}
+.tip_id { font-size: 75%; margin-right: 0.75em; }
+.tip_head .new { color: #8b0000; margin-left: 0.5em; font-size: 60%; }
 
-
-/** TIP本文 **********************************/
+/* 本文部分（★1段組に戻しました★） */
 .tip_body {
-	position:relative;
-	display:block;
-	font-size: 24px;
-	margin:2% 0;
-	padding:0 10px;
-	overflow:auto;
-	height: 80%;
+	position: relative;
+	display: block;
+	font-size: 22px;
+	margin: 0;
+	padding: 0;
+	height: calc(100% - 100px); /* ナビの分を引く */
+	overflow: auto;
 	font-weight: normal;
+	line-height: 1.8;
+	/* （2段組の魔法 column-count を削除しました！） */
 }
 
-
-
-/** ページナビ *****************************/
+/* ナビボタン（ページ切り替え） */
 .tip_nav {
 	position: absolute;
-	bottom: 0;
-	left: 0;
-	font-size:18px;
+	bottom: 0px;
+	width: 100%;
+	padding: 0; /* 1段組なので左右の変な余白を消しました */
+	text-align: center; /* 中央揃え */
+	margin: 0;
+	box-sizing: border-box;
+	list-style: none;
+	z-index: 10;
 }
-/* ページナビボタン */
 .tip_nav li {
 	display: inline-block;
-	margin-right: 5px;
+	margin: 0 5px;
 }
-/* ページナビクリック部分 */
 .tip_nav a {
-	color:#0077c1;
+	color: #222;
 	display: inline-block;
-	width:48px;
-	height:36px;
-	text-align:center;
+	width: 40px;
+	height: 30px;
+	text-align: center;
 	text-decoration: none;
-	line-height:36px;
-	background:rgba(255,255,255,0.8);
-	border-radius:6px;
-	border:2px solid #0077c1;
+	line-height: 30px;
+	background: transparent;
+	border: 1px solid #222;
 	cursor: pointer;
+	font-size: 16px;
 }
-.tip_nav a:hover {
-	color:rgba(0,0,80,1);
-	background:#fff001;
-	text-shadow: 1px 1px 0px rgba(0,0,0,0.3);
-}
-.tip_nav a.now {
-	color:#fff;
-	background:#0077c1;
-	cursor:default;
-}
-.tip_nav a.now:hover {
-	text-shadow: none;
-}
-/* ページナビ next・prevボタン */
-.tip_nav a.prev,
-.tip_nav a.next {
-	/*display: none;*/
-}
-.tip_nav a.prev.now,
-.tip_nav a.next.now {
-	/*visibility: hidden;*/
-	color:#bbb;
-	background:#fff;
-	border-color:#bbb;
+.tip_nav a:hover, .tip_nav a.now {
+	color: #fff;
+	background: #222; /* マウスオンや現在のページは黒塗り白文字に反転 */
 }
