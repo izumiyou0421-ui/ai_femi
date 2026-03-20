@@ -93,6 +93,7 @@ TYRANO.kag.stat.charas['ふえみ'].jname = '？？？'
 「あんた、ここがどこかわかってんの？」[p]
 [_tb_end_text]
 
+[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_245247_e!.mp3"  ]
 [tb_start_text mode=1 ]
 #&f.player
 「え？」[p]
@@ -177,6 +178,7 @@ TYRANO.kag.stat.charas['ふえみ'].jname = '？？？'
 [camera  time="250"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="80"  ease_type="linear"  ]
 [tb_chara_shake  name="ふえみ"  direction="y"  count="2"  swing="20"  time="100"  ]
 [tb_manpu  type="bikkuri2"  width="130"  time="500"  in_time="500"  out_time="500"  wait="false"  sevolume="0"  x="454"  y="25"  left="454"  top="25"  height="130"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_okoruwayo.mp3"  ]
 [tb_start_text mode=1 ]
 #ふえみ
 「私を感情的な女と決めつけて、教え諭そうとしてるんでしょ！？」[p]
@@ -207,6 +209,7 @@ TYRANO.kag.stat.charas['ふえみ'].jname = '？？？'
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="fuemi_wakatteruno.mp3"  ]
 [tb_start_text mode=1 ]
 #ふえみ
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]
@@ -224,6 +227,7 @@ TYRANO.kag.stat.charas['ふえみ'].jname = '？？？'
 [_tb_end_text]
 
 [tb_chara_shake  name="ふえみ"  direction="x"  count="2"  swing="20"  time="100"  ]
+[playse  volume="100"  time="1000"  buf="0"  ]
 [tb_start_text mode=1 ]
 #ふえみ
 「は、はあ！？あんた、正気？それこそ『誤った等価関係』じゃない！」[p]

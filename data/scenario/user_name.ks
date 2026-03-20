@@ -15,6 +15,24 @@
 
 [edit  left="550"  top="255"  width="200"  height="36"  size="20"  maxchars="200"  name="f.player"  reflect="false"  ]
 [button  storage=""  target="*input_submit"  x="550"  y="290"  graphic="LcgdZgQpYoK6D8Y1771001979_1771002016.png"  width="200"  height="200"  _clickable_img=""  name="img_10"  ]
+
+; ========== ここから追加 ==========
+[iscript]
+$(".text_box").on("keydown", function(e){
+    // IME入力中（漢字変換中など）のEnterキーなら、ここで処理を止める（何もしない）
+    if(e.originalEvent && e.originalEvent.isComposing || e.keyCode === 229){
+        return;
+    }
+
+    // 変換中ではない状態でEnterキーが押された場合
+    if(e.key === "Enter" || e.keyCode === 13){
+        e.preventDefault(); // ブラウザの標準動作を無効化
+        $(".img_10").trigger("click"); // 決定ボタンをクリックしたことにする
+    }
+});
+[endscript]
+; ========== ここまで追加 ==========
+
 [s  ]
 *input_submit
 
