@@ -15,7 +15,7 @@
 ;標準のメッセージレイヤを非表示
 
 
-[playbgm  volume="70"  time="1000"  loop="true"  storage="audiostock_1073320_title.mp3"  ]
+[playbgm  volume="60"  time="1000"  loop="true"  storage="audiostock_1073320_title.mp3"  ]
 [playse  volume="800"  time="0"  buf="0"  storage="ai_feminist_call_after_cutting.mp3"  ]
 [tb_hide_message_window  ]
 

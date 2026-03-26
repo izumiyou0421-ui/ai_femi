@@ -140,6 +140,12 @@ f.is_loading = false;
 ;-----------------------------------------------------------
 
 
+*input_start
+
+
+; 画面のテキストをクリア
+
+
 [cm  ]
 
 ; 変数をクリア
@@ -152,14 +158,7 @@ f.user_input = "";
 
 #
 ふえみに何と言う？[p]
-
-
-[r]
-
-*input_start
-
-
-#
+; [p]を削除して、そのまま入力フォームを表示させます
 
 
 [edit  name="f.user_input"  left="200"  top="420"  width="600"  height="50"  size="30"  maxchars="100"  ]
@@ -169,6 +168,10 @@ f.user_input = "";
 
 
 [glink  color="blue"  storage="fuemi_ai.ks"  target="*submit_input"  text="決定"  x="850"  y="420"  width="100"  height="20"  exp="f.captureInput()"  ]
+
+; [s]タグでゲームの進行を停止し、プレイヤーの操作（ボタン入力）を待ちます
+
+
 [s  ]
 
 ;-----------------------------------------------------------
@@ -192,6 +195,7 @@ f.user_input = "";
 
 #
 文字が入力されていません。[p]
+; *input_start に戻ることで、[cm]から処理が走り、再度テキストとフォームが表示されます
 
 
 [jump  target="*input_start"  storage=""  ]

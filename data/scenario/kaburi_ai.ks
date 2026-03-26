@@ -134,66 +134,50 @@ f.is_loading = false;
 };
 [endscript]
 
-
 ;-----------------------------------------------------------
 ; チャット画面
 ;-----------------------------------------------------------
 
+*input_start
 
+; 画面クリア
 [cm  ]
 
 ; 変数をクリア
-
-
 [iscript]
 f.user_input = "";
 [endscript]
 
-
 #
-かぶりに何と言う？[p]
+かぶりに何と言う？
 
-
-[r]
-
-*input_start
-
-
-#
-
-
+; [p]と[r]を削除して、そのまま入力フォームを表示させます
 [edit  name="f.user_input"  left="200"  top="420"  width="600"  height="50"  size="30"  maxchars="100"  ]
 
 ; 送信ボタン
 ; ★重要: exp属性でジャンプする前に値を保存する関数を実行します
-
-
+; storageはご自身のファイル名（kaburi_ai.ks）に合わせてあります
 [glink  color="blue"  storage="kaburi_ai.ks"  target="*submit_input"  text="決定"  x="850"  y="420"  width="100"  height="20"  exp="f.captureInput()"  ]
+
+; [s]タグでゲームの進行を停止し、プレイヤーの操作（ボタン入力）を待ちます
 [s  ]
 
 ;-----------------------------------------------------------
 ; 送信・応答処理
 ;-----------------------------------------------------------
 
-
 *submit_input
 
-
 ; 画面クリア (ここでフォームは消えますが、変数は確保済みです)
-
-
 [cm  ]
 
 ; 入力が空だった場合のチェック
-
-
 [if exp="!f.user_input || f.user_input == ''"]
-
 
 #
 文字が入力されていません。[p]
 
-
+; *input_start に戻ることで、[cm]から処理が走り、再度テキストとフォームが表示されます
 [jump  target="*input_start"  storage=""  ]
 [endif]
 

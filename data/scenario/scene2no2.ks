@@ -7,10 +7,25 @@
 [cm  ]
 [bg  time="0"  method="crossfade"  storage="room2.jpg"  ]
 [mask_off  time="500"  effect="fadeOut"  ]
+[tb_start_tyrano_code]
+[position layer="message0" line="5"]
+[font size="35"]
+[_tb_end_tyrano_code]
+
 [tb_start_text mode=1 ]
+#&f.player
 （ほんと、なんだったんだ……さっきのは）[p]
+
+[_tb_end_text]
+
+[tb_start_tyrano_code]
+[resetfont]
+[_tb_end_tyrano_code]
+
+[tb_start_text mode=1 ]
+#&f.player
 駅を出てから、ずっと頭の中であの女の子の声が反響し続けている。[p]
-（そういえば、最近クイッターでよく見るな、ああいうの……まさか現実で会うとは思わなかったが）[p]
+（そういえば、最近ツブッターでよく見るな、ああいうの……まさか現実で会うとは思わなかったが）[p]
 [_tb_end_text]
 
 [playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1243965_tameiki.mp3"  ]
@@ -20,10 +35,11 @@
 [_tb_end_text]
 
 [tb_start_text mode=4 ]
+#&f.player
 （さて、朝礼も終わったし……まずはどこに行こう？）
 [_tb_end_text]
 
-[glink  color="ts13"  storage="scene2no2.ks"  size="20"  text="他の教室を回ってみる"  target="*l4"  width="300"  y="225"  ]
+[glink  color="ts13"  storage="scene2no2.ks"  size="20"  text="他の教室を回ってみる"  target="*l4"  width="300"  y="233"  x="486"  height=""  _clickable_img=""  ]
 [glink  color="ts13"  storage="scene2no2.ks"  size="20"  text="静かな図書館へ行く"  target="*l5"  width="300"  y="325"  ]
 [glink  color="ts13"  storage="scene2.ks"  size="20"  text="屋上に行ってみる"  target="*l6"  width="300"  y="425"  ]
 [s  ]
@@ -109,8 +125,9 @@
 
 [stopbgm  time="1000"  fadeout="true"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
-[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_fronteye.png"  ]
+[chara_mod  name="かぶり"  time="1000"  cross="true"  storage="chara/2/kaburi_middle_kage_fronteye.png"  ]
 [mask_off  time="1000"  effect="fadeOut"  ]
+[playbgm  volume="50"  time="300"  loop="false"  storage="audiostock_1506471.mp3"  fadein="true"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="kaburi26.2.18_(mp3cut.net)-2.mp3"  ]
 [tb_start_text mode=1 ]
 #猫尾かぶり
@@ -123,12 +140,13 @@
 （……なんだって？）[p]
 [_tb_end_text]
 
+[stopbgm  time="0"  ]
 [playbgm  volume="50"  time="1000"  loop="true"  storage="audiostock_1479833_kaburi_ura.mp3"  ]
 [tb_start_text mode=1 ]
-#&f.player
-見て見ぬふりをして通り過ぎようとした俺は、トゲのある独り言に思わず耳を疑った。[p]
 #猫尾かぶり
 「……『座ってるだけでええ』？うちの脳みそは、あんたらの飾りか何かか？」[p]
+#&f.player
+見て見ぬふりをして通り過ぎようとした俺は、トゲのある独り言に思わず耳を疑った。[p]
 [_tb_end_text]
 
 [tb_manpu  type="tameiki"  width="108"  time="1000"  in_time="1000"  out_time="465"  wait="false"  sevolume="0"  x="544"  y="234"  left="544"  top="234"  height="108"  ]
@@ -137,37 +155,64 @@
 「かわいい言うてくれるんはええけど、舐められてる気もするんよなぁ」[p]
 [_tb_end_text]
 
-[wait  time="1000"  ]
-[camera  time="1000"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="30"  ease_type="linear"  ]
-[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_re.png"  ]
+[tb_start_text mode=1 ]
+#&f.player
+予想外に鋭い言葉のナイフに、思わず足が止まる。[p]
+[_tb_end_text]
+
+[playse  volume="100"  time="1000"  buf="0"  storage="audiostock_1693450_gasyan.mp3"  ]
+[tb_start_text mode=1 ]
+その拍子に、掃除用具を足先で蹴ってしまった。[p]
+[_tb_end_text]
+
+[chara_mod  name="かぶり"  time="0"  cross="true"  storage="chara/2/kaburi_odoroki2.png"  ]
+[tb_chara_shake  name="かぶり"  direction="y"  count="2"  swing="20"  time="100"  ]
+[tb_manpu  type="nanto"  width="140"  time="500"  in_time="500"  out_time="500"  wait="true"  sevolume="0"  x="469"  y="22"  left="469"  top="22"  height="140"  ]
+[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_zetsubo.png"  ]
+[playse  volume="100"  time="1000"  buf="0"  storage="Kaburi26.2.23.1942_(mp3cut.net)_mirarechattaka.mp3"  ]
+[tb_start_text mode=1 ]
+#猫尾かぶり
+「あーあ。見られちゃったか、うちの毒」[p]
+#&f.player
+「あ、いや……その、悪い。驚かせるつもりじゃ……」[p]
+[_tb_end_text]
+
+[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_basic_re.png"  ]
+[tb_start_text mode=1 ]
+#猫尾かぶり
+「見ーひん顔やな、名前なんて言うの?」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#&f.player
+「あ、……[emb exp="f.player"]だけど」[p]
+[_tb_end_text]
+
 [playse  volume="100"  time="1000"  buf="0"  storage="kaburi26.2.23.1949_(mp3cut.net).mp3"  ]
 [tb_start_text mode=1 ]
 #猫尾かぶり
-「なあ……あんたはどう思う？」[p]
-#&f.player
-（……ま、また俺！？）[p]
+「[emb exp="f.player"]君、よろしゅう。……なぁ、あんたはどう思う？」[p]
 [_tb_end_text]
 
 [playse  volume="50"  time="1000"  buf="0"  storage="audiostock_245197_hi.mp3"  ]
 [tb_start_text mode=1 ]
 #&f.player
+「えっ」[p]
+[_tb_end_text]
+
+[camera  time="1000"  zoom="1.3"  wait="true"  layer="0"  x="0"  y="30"  ease_type="linear"  ]
+[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_re.png"  ]
+[tb_start_text mode=1 ]
+#猫尾かぶり
+「えって、さっきの聞いとったやんな？」[p]
+[_tb_end_text]
+
+[tb_start_text mode=1 ]
+#&f.player
 「お、俺ですか……？」[p]
 [_tb_end_text]
 
-[tb_chara_shake  name="かぶり"  direction="y"  count="1"  swing="20"  time="600"  ]
-[tb_start_text mode=1 ]
-#猫尾かぶり
-「あんた以外誰がおるん？」[p]
-[_tb_end_text]
-
 [chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_fronteye.png"  ]
-[playse  volume="100"  time="1000"  buf="0"  storage="Kaburi26.2.23.1942_(mp3cut.net)_mirarechattaka.mp3"  ]
-[tb_start_text mode=1 ]
-#猫尾かぶり
-「あーあ。見られちゃったか、うちの毒」[p]
-[_tb_end_text]
-
-[chara_mod  name="かぶり"  time="600"  cross="true"  storage="chara/2/kaburi_middle_kage_re.png"  ]
 [playse  volume="100"  time="1000"  buf="0"  storage="Kaburi26.2.23.1942_(mp3cut.net)_darenimoiwanntoite.mp3"  ]
 [tb_start_text mode=1 ]
 #猫尾かぶり

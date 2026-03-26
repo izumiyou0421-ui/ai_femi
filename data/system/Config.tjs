@@ -26,7 +26,7 @@
 ;autoSpeedWithText=60
 ;cursorDefault=default
 ;mediaFormatDefault=ogg
-;defaultBgmVolume=100
+;defaultBgmVolume=40
 ;defaultSeVolume=100
 ;defaultMovieVolume=100
 ;defaultBgmSlotNum=1

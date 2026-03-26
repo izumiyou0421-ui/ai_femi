@@ -35,7 +35,7 @@
 
 [playse  volume="100"  time="1000"  buf="0"  storage="renai_ice.mp3"  ]
 [stopbgm  time="1000"  ]
-[chara_show  name="レナイ"  time="500"  wait="true"  storage="chara/3/renai_middle_soup_kage.png"  width="1280"  height="720"  left="0"  top="0"  reflect="true"  ]
+[chara_show  name="レナイ"  time="500"  wait="true"  storage="chara/3/renai_middle_wink_silhouette.png"  width="1280"  height="720"  left="0"  top="0"  reflect="false"  ]
 [tb_start_text mode=1 ]
 図書室の奥、一番日当たりの悪い自習コーナーから、音が聞こえてくる。[p]
 気になって本棚の隙間から覗き込むと、なぜか大量の紙切れに囲まれた小柄な人影が見えた。[p]
@@ -141,8 +141,9 @@
 
 [tb_start_text mode=1 ]
 #長狭レナイ
-「……肯定。彼女はこの学園の理想的な女性像という歪んだOSを完璧に実行している実行ファイル」[p]
-「……でも、私の解析では、そのソースコードには致命的なバグが潜んでいる」[p]
+「……肯定。彼女はこの学園の理想的な女性像という歪んだOSの実行者」[p]
+「……でも、そのソースコードには致命的なバグが潜んでいる」[p]
+「彼女の笑顔というインターフェースの裏には、処理しきれないほどの感情……抑圧への憤怒が蓄積されている」[p]
 「……と、それで私の設問を[ruby text=キャン]無[ruby text=セ]効[ruby text=ル]化できたと思ったら大間違い。話題のすり替えは、典型的な[ruby text=エ]回[ruby text=ス]避[ruby text=ケー]行[ruby text=プ]動」[p]
 [_tb_end_text]
 
@@ -166,7 +167,6 @@
 [playse  volume="100"  time="1000"  buf="0"  storage="renai_ice.mp3"  ]
 [tb_start_text mode=1 ]
 #長狭レナイ
-レナイは氷入りヴィシソワーズが入ったボトルをこちらに差し出してきた。[p]
 「……と、それで私の設問を[ruby text=キャン]無[ruby text=セ]効[ruby text=ル]化できたと思ったら大間違い。話題のすり替えは、典型的な[ruby text=エ]回[ruby text=ス]避[ruby text=ケー]行[ruby text=プ]動」[p]
 [_tb_end_text]
 
@@ -241,4 +241,4 @@
 [chara_hide  name="レナイ"  time="1000"  wait="true"  pos_mode="true"  ]
 [mask  time="1000"  effect="fadeIn"  color="0x000000"  ]
 [stopbgm  time="1000"  ]
-[jump  storage="scene3no2.ks"  target=""  ]
+[jump  storage="scene4.ks"  target="*start"  ]
