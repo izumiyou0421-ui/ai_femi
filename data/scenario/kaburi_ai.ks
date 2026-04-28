@@ -181,7 +181,6 @@ f.user_input = "";
 [jump  target="*input_start"  storage=""  ]
 [endif]
 
-
 ; API呼び出し
 
 
